@@ -1,0 +1,22 @@
+# 相依
+node_modules/
+web/node_modules/
+
+# build 產物
+dist/
+web/dist/
+web/.vite/
+
+# 大型原始 / 中間檔（不上 git）
+原始素材/
+/jpg/
+/img/
+/thumb/
+_frames/
+*.zip
+
+# 暫存
+*.log
+.DS_Store
+
+# 註：網站實際使用的是 web/public/img、web/public/thumb、web/public/data（已優化、會進 git）
