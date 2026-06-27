@@ -9,7 +9,7 @@
   --shadow-lg:0 10px 30px rgba(60,45,25,.18),0 4px 10px rgba(60,45,25,.10);
 }
 *{box-sizing:border-box}
-html,body,#root{background:var(--wall);margin:0}
+html,body,#root{background:var(--wall);margin:0;max-width:100%;overflow-x:hidden}
 body{color:var(--ink);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
   font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
 .serif{font-family:"Noto Serif TC","Songti TC","PMingLiU",Georgia,serif}
@@ -121,8 +121,18 @@ details.walls summary{cursor:pointer;color:var(--accent);font-size:13.5px;paddin
   background:rgba(0,0,0,.4);width:46px;height:46px;border-radius:50%;display:flex;align-items:center;
   justify-content:center}
 .ex-select{display:none}
+.grid,.swipe,.swipe-stage{max-width:100%}
+.swipe-stage canvas{max-width:100%}
 @media(max-width:760px){
   nav{display:none}
-  main{padding:16px}
+  main{padding:14px;max-width:100vw}
+  .hd{padding:14px 16px 12px}
+  .hd h1{font-size:18px;letter-spacing:1px}
+  .hd h1 .d{font-size:12px}
+  .hd .sub{font-size:11px}
+  .hd::after{width:80px}
   .ex-select{display:block;order:-1;flex:1 1 100%;font-weight:600}
+  .toolbar input[type=search]{min-width:0}
+  .swipe-stage{height:62vh;min-height:360px}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
 }
