@@ -82,6 +82,13 @@ export default function App() {
 
         <main>
           <div className="toolbar">
+            <select className="ex-select" value={curEx} onChange={(e) => setCurEx(e.target.value)}>
+              <option value={ALL}>📋 全部展區（{data.meta.total_cards}）</option>
+              {favCount > 0 && <option value={FAV}>★ 精選口袋名單（{favCount}）</option>}
+              {data.exhibitions.map((ex) => (
+                <option key={ex.key} value={ex.key}>{ex.short}（{ex.count}）</option>
+              ))}
+            </select>
             <input type="search" placeholder="搜尋名稱 / 描述 / 編號…" value={q} onChange={(e) => setQ(e.target.value)} />
             <select value={type} onChange={(e) => setType(e.target.value)}>
               <option value="">類型：全部</option>

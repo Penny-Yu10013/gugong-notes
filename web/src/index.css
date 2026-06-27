@@ -120,4 +120,9 @@ details.walls summary{cursor:pointer;color:var(--accent);font-size:13.5px;paddin
 .mclose{position:fixed;top:18px;right:24px;font-size:26px;color:#fff;cursor:pointer;z-index:60;
   background:rgba(0,0,0,.4);width:46px;height:46px;border-radius:50%;display:flex;align-items:center;
   justify-content:center}
-@media(max-width:760px){nav{display:none}main{padding:16px}}
+.ex-select{display:none}
+@media(max-width:760px){
+  nav{display:none}
+  main{padding:16px}
+  .ex-select{display:block;order:-1;flex:1 1 100%;font-weight:600}
+}
