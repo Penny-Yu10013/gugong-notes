@@ -20,3 +20,6 @@ _frames/
 .DS_Store
 
 # 註：網站實際使用的是 web/public/img、web/public/thumb、web/public/data（已優化、會進 git）
+
+# Claude Code 本機設定(權限清單,含本機路徑,不上傳)
+.claude/settings.local.json
